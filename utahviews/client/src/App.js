@@ -1,18 +1,20 @@
-import React from 'react';
-import SignUp from '../src/components/SignUp';
-
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import Table from './components/Table';
+import SignUp from '../src/components/SignUp';
+import API from './utils/API';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          
-        </div>
+  const [trails, setTrails] = useState([]);
 
-      </header>
-    </div>
+  useEffect( () => {
+    API.getTrails().then((trails) => setTrails(trails))
+  }, []);
+
+  useEffect(() => console.log(trails), [trails])
+
+  return (
+      <Table trails = {trails} />
   );
 }
 
