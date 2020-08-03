@@ -11,7 +11,7 @@ const TableBody = (props) => {
             <td>{props.difficulty}</td>
             <td>{props.length}</td>
             {/* <td>{props.picture.thumbnail}</td> */}
-            <td><img src={props.imgSqSmall} /></td>
+            <td><img src={props.imgSqSmall} alt={'profile pic'} /></td>
         </tr>
 
     )
