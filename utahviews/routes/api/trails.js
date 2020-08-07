@@ -3,7 +3,7 @@ const trailsController = require("../../controllers/trailsController");
 
 // Matches with "/api/trails"
 router.route("/")
-  .get(trailsController.findAll)
+  .get(trailsController.get)
   .post(trailsController.create);
 
 // Matches with "/api/books/:id"
