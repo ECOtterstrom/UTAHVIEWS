@@ -6,15 +6,21 @@ import API from '../utils/API';
 
 function App() {
   const [trails, setTrails] = useState([])
+  const [options, setOptions] = useState({
+    lat: '',
+    lon: '',
+    distance: ''
+  });
+
 
   useEffect(() => {
     loadTrails()
   }, [])
 
   function loadTrails() {
-    API.getTrails()
+    API.getTrails(options)
     .then((res) => 
-      setTrails(res.data)
+      setTrails(res.data.trails)
       )
       .catch(err => console.log(err));
     //API.getTrails().then((trails) => setTrails(trails.data.trails))
