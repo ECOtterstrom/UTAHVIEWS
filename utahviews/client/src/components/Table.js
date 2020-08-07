@@ -11,7 +11,7 @@ const Table = (props) => {
                 <TableHead />
             </thead>
             <tbody>
-                {props.trails.map((trail) => <TableBody {...trail} />)} 
+                {props.trails.map((trail) => <TableBody key={trail.id} {...trail} />)} 
             </tbody>
         </table>
     )
