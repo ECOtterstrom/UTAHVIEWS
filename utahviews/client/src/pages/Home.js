@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function Home() {
     return (
         <div>
@@ -43,7 +44,6 @@ function Home() {
         {/* <!-- <div style="background-image: url('views.jpg');"></div> --> */}
         {/* <!-- Put anything you want here! There is just a spacer below for demo purposes! --> */}
 
-            <div style="height: 200px;"></div>
 
         {/* <!-- Content section --> */}
 
