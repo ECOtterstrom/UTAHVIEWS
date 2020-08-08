@@ -6,7 +6,7 @@ router.route("/")
   .get(trailsController.get)
   .post(trailsController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/trails/:id"
 router
   .route("/:id")
   .get(trailsController.findById)

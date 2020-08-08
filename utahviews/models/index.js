@@ -1,3 +1,4 @@
 module.exports = {
-  Trail: require("./trail")
+  Trail: require("./trail"),
+  City: require("./city")
 };
