@@ -33,15 +33,15 @@ function Home() {
         {/* <!-- Content section --> */}
             <section className="py-5">
                 <div className="container">
-                    <h1>Section Heading</h1>
-                        <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+                    <h1>Explore Utah with us!</h1>
+                        <p className="lead">Using our app you can search for any trail in Utah right at your finger tips!</p>
+                        <p></p>
                 </div>
             </section>
 
         {/* <!-- Image element - set the background image for the header in the line below --> */}
         {/* <!-- <div className="py-5 bg-image-full" style="background-image: url('views.jpg);"> --> */}
-        {/* <!-- <div style="background-image: url('views.jpg');"></div> --> */}
+        { <img className="img-fluid d-block mx-auto" src="moab.jpg" alt="" />}
         {/* <!-- Put anything you want here! There is just a spacer below for demo purposes! --> */}
 
 
@@ -49,15 +49,16 @@ function Home() {
 
             <section className="py-5">
                 <div className="container">
-                    <h1>Section Heading</h1>
-                        <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+                    <h1>Hike with confidence using our app</h1>
+                        <p className="lead">We have all the trails you could want to explore in Utah</p>
+                        <p>This app is for those who love the outdoors! wether you are going on a quick hike or a long hike we got it!</p>
                 </div>
             </section>
 
         {/* <!-- Footer --> */}
             <footer className="py-5 bg-dark">
                 <div className="container">
+                
                     <p className="m-0 text-center text-white">Made with love by Miro, Erin and Robert Copyright &copy; 2020</p>
                 </div>
         {/* <!-- /.container --> */}
