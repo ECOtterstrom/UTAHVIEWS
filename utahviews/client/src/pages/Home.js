@@ -18,9 +18,9 @@ function Home() {
                             <div className="search-form" action="#">
                                 <div className="inputs-holder-border"></div>
                                 <div className="inputs-holder">
-                                    <div data-react-className="AlgoliaSearchBox" data-react-props="{&quot;searchIconButton&quot;:false,&quot;homePage&quot;:true,&quot;defaultLatLng&quot;:[38.97850036621094,-76.49220275878906],&quot;currentUser&quot;:null,&quot;languageRegionCode&quot;:&quot;en-US&quot;}" data-hydrate="t" data-react-cache-id="AlgoliaSearchBox-0">
+                                    <div className="AlgoliaSearchBox" data-react-props="{&quot;searchIconButton&quot;:false,&quot;homePage&quot;:true,&quot;defaultLatLng&quot;:[38.97850036621094,-76.49220275878906],&quot;currentUser&quot;:null,&quot;languageRegionCode&quot;:&quot;en-US&quot;}" data-hydrate="t" data-react-cache-id="AlgoliaSearchBox-0">
                                         <form className="algolia-search styles-module__form___3hC1t undefined" data-reactroot="">
-                                            <input type="text" autocomplete="off" autocorrect="off" className="styles-module__input___28bDf" placeholder="Enter a city, park or trail name" spellcheck="false" />
+                                            <input type="text" autoComplete="off" autoCorrect="off" className="styles-module__input___28bDf" placeholder="Enter a city, park or trail name" spellCheck="false" />
                                             <input type="submit" className="styles-module__btn___I-OkD  " title="Search" value="Search" />
                                         </form>
                                     </div>
