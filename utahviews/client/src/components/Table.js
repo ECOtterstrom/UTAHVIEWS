@@ -6,14 +6,18 @@ import TableBody from './TableBody';
 const Table = (props) => {
 
     return (
-        <table>
-            <thead>
-                <TableHead />
-            </thead>
-            <tbody>
-                {props.trails.map((trail) => <TableBody key={trail.id} {...trail} />)} 
-            </tbody>
-        </table>
+        <div className="container">
+            <div className="row">
+                <table className='table'>
+                    <thead>
+                        <TableHead />
+                    </thead>
+                    <tbody>
+                        {props.trails.map((trail) => <TableBody key={trail.id} {...trail} />)}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     )
 }
 
