@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Search from "./pages/Search";
-// import Home from "./pages/Home";
+// import Search from "./pages/Search";
+import Home from "./pages/Home";
 import Nav from "./components/Nav";
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
     <Router >
     <div>
       <Nav />
-      <Search />
-      {/* <Home /> */}
+      {/* <Search /> */}
+      <Home />
     </div>
      </Router>
   );
