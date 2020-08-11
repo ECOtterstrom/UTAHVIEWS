@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
+import "../styles/Nav.css"
 
 function Nav() {
     const location = useLocation();
     return (
 
-
+       <div className = "navBar">
         <ul className="nav nav-tabs">
         <li className="nav-item">
           <Link
@@ -45,7 +46,7 @@ function Nav() {
           </Link>
         </li>
       </ul>
-
+      </div>
         
   
     );

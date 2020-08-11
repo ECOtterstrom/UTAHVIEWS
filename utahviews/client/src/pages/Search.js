@@ -5,6 +5,8 @@ import Table from '../components/Table';
 import API from '../utils/API';
 
 function App() {
+
+  
   const [trails, setTrails] = useState([])
   const [options, setOptions] = useState({
     lat: '',
@@ -33,6 +35,8 @@ function App() {
       <Table trails={trails} />
     </div>
   );
+
+  
 }
 
 export default App;
