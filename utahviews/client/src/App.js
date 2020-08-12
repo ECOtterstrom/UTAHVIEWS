@@ -9,14 +9,21 @@ import SignUp from "./components/SignUp";
 
 function App() {
   return (
-    <Router >
-    <div>
-      <Nav />
-     <Route exact path="/" component={Home}/>
-    <Route exact path="/search" component={Search}/>
-    {/* <Route exact path="/Trails" component={Trail}/> */}
-    </div>
-     </Router>
+
+    <>
+      <Router >
+        <div>
+          <Nav />
+          <Route exact path='/' component={Home} />
+          <Route exact path="/search" component={Search}/>
+          <Route exact path='/login' component={LogIn} />
+          <Route exact path='/signup' component={SignUp} />
+          <Search />
+        </div>
+      </Router>
+      
+    </>
+
   );
 }
 

@@ -4,7 +4,8 @@ const db = require("../models");
 // This file empties the City collection and inserts the city below
 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/utahviews"
+    process.env.MONGODB_URI || 
+    "mongodb://localhost/utahviews"
 );
 
 const citySeed = [

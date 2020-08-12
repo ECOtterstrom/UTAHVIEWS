@@ -4,18 +4,20 @@ const Axios = require('axios');
 // Defining methods for the trailsController
 module.exports = {
   get: async function(req, res) {
-    let { lat, lon, miles } = req.body;
-    if(!miles) {
-      miles = "30";
+    let { latitude, longitude } = req.query;
+    if(!latitude) {
+      latitude = "40.027"
     }
-    if(!lat) {
-      lat = "40.027"
+    if(!longitude) {
+      longitude = "-105.251"
     }
-    if(!lon) {
-      lon = "-105.251"
+
+    try {
+      const { data } = await Axios.get(`https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&maxDistance=30&key=200857114-bb6b66798e5094dcd9c231249bb926ba`)
+      res.json(data);
+    } catch(err) {
+      console.log(err);
     }
-    const { data } = await Axios.get(`https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lon}&maxDistance=${miles}&key=200857114-bb6b66798e5094dcd9c231249bb926ba`)
-    res.json(data);
   },
   // get: function(req, res) {
   //   db.Trail

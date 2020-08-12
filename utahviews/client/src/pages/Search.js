@@ -1,36 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css';
 import Table from '../components/Table';
-import InputField from '../components/InputField';
 import API from '../utils/API';
+import CityList from '../components/CityList';
 
 function App() {
 
-  
-  const [trails, setTrails] = useState([])
-  const [options, setOptions] = useState({
-    lat: '',
-    lon: '',
-    distance: ''
-  });
+  const [trails, setTrails] = useState([]);
   const [cities, setCities] = useState([])
   const [cityOptions, setCityOptions] = useState({
-    city: '',
-    latitude: '',
-    longitude: ''
+    city: "Alton",
+    latitude: 37.43,
+    longitude: -112.51
   });
 
 
   useEffect(() => {
     loadTrails()
-  }, [])
+  }, [cityOptions])
 
   useEffect(() => {
     loadCities()
   }, [])
 
   function loadTrails() {
-    API.getTrails(options)
+    API.getTrails(cityOptions)
     .then((res) => 
       setTrails(res.data.trails)
       )
@@ -41,18 +35,31 @@ function App() {
   function loadCities() {
     API.getCities(cityOptions)
     .then((res) => 
-      setCities(res.data.cities)
+      setCities(res.data)
       )
       .catch(err => console.log(err));
   };
+
+  //searches for employees based on last name
+  const handleChange = (event) => {
+    //updates filteredCities array
+    const filter = event.target.value.toLowerCase()
+    console.log(filter);
+    const result = cities.filter(city => city.city.toLowerCase().includes(filter))
+    console.log(result[0]);
+    setCityOptions(result[0]);
+  }
+
 
   useEffect(() => console.log(trails), [trails])
   useEffect(() => console.log(cities), [cities])
 
   return (
-    <div>
-      <Table trails={trails} />
+    <>
+    <div className="container">
+      <Table trails={trails} cities={cities} handleChange={handleChange}/>
     </div>
+    </>
   );
 
   

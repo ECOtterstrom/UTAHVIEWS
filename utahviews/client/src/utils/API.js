@@ -7,7 +7,7 @@ export default {
   
   //gets all trails
   getTrails: function(options) {
-    return Axios.get("/api/trails", options);
+    return Axios.get("/api/trails", {params: options});
   },
 
   //gets all cities
