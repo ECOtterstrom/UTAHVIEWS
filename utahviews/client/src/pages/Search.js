@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css';
 import Table from '../components/Table';
-//import SignUp from '../src/components/SignUp';
+import InputField from '../components/InputField';
 import API from '../utils/API';
 
 function App() {
@@ -13,10 +13,20 @@ function App() {
     lon: '',
     distance: ''
   });
+  const [cities, setCities] = useState([])
+  const [cityOptions, setCityOptions] = useState({
+    city: '',
+    latitude: '',
+    longitude: ''
+  });
 
 
   useEffect(() => {
     loadTrails()
+  }, [])
+
+  useEffect(() => {
+    loadCities()
   }, [])
 
   function loadTrails() {
@@ -28,7 +38,16 @@ function App() {
     //API.getTrails().then((trails) => setTrails(trails.data.trails))
   };
 
+  function loadCities() {
+    API.getCities(cityOptions)
+    .then((res) => 
+      setCities(res.data.cities)
+      )
+      .catch(err => console.log(err));
+  };
+
   useEffect(() => console.log(trails), [trails])
+  useEffect(() => console.log(cities), [cities])
 
   return (
     <div>

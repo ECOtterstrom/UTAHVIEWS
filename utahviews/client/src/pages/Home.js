@@ -37,7 +37,7 @@ function Home() {
         {/* <!-- Content section --> */}
             <section className="py-5">
                 <div className="container">
-                    <h1>Explore Utah with us!</h1>
+                    <h1>Explore Utah with us! please</h1>
                         <p className="lead">Using our app you can search for any trail in Utah right at your finger tips!</p>
                         <p></p>
                 </div>
