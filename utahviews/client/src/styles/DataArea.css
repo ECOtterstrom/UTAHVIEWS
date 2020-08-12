@@ -1,0 +1,33 @@
+.box {
+position: relative;
+display: inline-block;
+
+}
+.box .banner__text  {
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 40%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 60%; /* Set the width of the positioned div */
+    }
+.heading-1 {
+
+    color: white;
+}
+
+.img-fluid d-block mx-auto {
+    border:1px solid #021a40;
+}
+
+.image {
+    border:1px solid #021a40;
+}
+/* 
+.mainImage {
+
+  background-repeat: no-repeat;
+  background-size: 100px;
+} */
