@@ -15,3 +15,7 @@ export default {
     return Axios.get("/api/cities", citiesOptions);
   }
 }
+
+export const UserService = {
+  createUser: (userData) => Axios.post('/api/auth/', userData),
+}
