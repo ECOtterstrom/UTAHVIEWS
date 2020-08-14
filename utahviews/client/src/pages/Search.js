@@ -2,15 +2,19 @@ import React, { useEffect, useState } from 'react';
 import '../App.css';
 import Table from '../components/Table';
 import API from '../utils/API';
-import CityList from '../components/CityList';
+//import FavBtn from '../components/FavBtn';
+//import CityList from '../components/CityList';
 
 function App() {
   const [trails, setTrails] = useState([]);
   const [cities, setCities] = useState([])
   const [cityOptions, setCityOptions] = useState({
-    city: "Alton",
-    latitude: 37.43,
-    longitude: -112.51
+    city: "",
+    latitude: "",
+    longitude: ""
+    // city: "Alton",
+    // latitude: 37.43,
+    // longitude: -112.51
   });
 
 
@@ -56,7 +60,6 @@ function App() {
   return (
     <>
       <div className="container">
-        {/* <CityList cities={cities} handleChange={handleChange} /> */}
         <Table trails={trails} cities={cities} handleChange={handleChange} />
       </div>
     </>

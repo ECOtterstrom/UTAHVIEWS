@@ -14,6 +14,7 @@ const TableHead = () => {
                 <th scope="col">Hiker Rating</th>
                 <th scope="col">Hiker Votes</th>
                 <th scope="col">Image</th>
+                <th scope="col">Favorite</th>
             </tr>
     )    
 }

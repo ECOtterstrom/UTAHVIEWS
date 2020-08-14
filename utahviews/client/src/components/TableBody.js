@@ -1,4 +1,5 @@
 import React from 'react';
+import FavBtn from '../components/FavBtn'
 
 const TableBody = (props) => {
     
@@ -13,8 +14,8 @@ const TableBody = (props) => {
             <td>{props.ascent}</td>
             <td>{props.stars}</td>
             <td>{props.starVotes}</td>
-            {/* <td>{props.picture.thumbnail}</td> */}
             <td><img src={props.imgSqSmall} alt={'profile pic'} /></td>
+            <td className="fav-icon"><FavBtn /></td>
         </tr>
 
     )
