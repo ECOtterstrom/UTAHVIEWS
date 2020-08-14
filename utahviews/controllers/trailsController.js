@@ -13,7 +13,7 @@ module.exports = {
     }
 
     try {
-      const { data } = await Axios.get(`https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&maxDistance=30&key=200857114-bb6b66798e5094dcd9c231249bb926ba`)
+      const { data } = await Axios.get(`https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&maxDistance=25&key=200857114-bb6b66798e5094dcd9c231249bb926ba`)
       res.json(data);
     } catch(err) {
       console.log(err);

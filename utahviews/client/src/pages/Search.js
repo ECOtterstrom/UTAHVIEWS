@@ -24,8 +24,8 @@ function App() {
 
   function loadTrails() {
     API.getTrails(cityOptions)
-    .then((res) => 
-      setTrails(res.data.trails)
+      .then((res) =>
+        setTrails(res.data.trails)
       )
       .catch(err => console.log(err));
     //API.getTrails().then((trails) => setTrails(trails.data.trails))
@@ -33,8 +33,8 @@ function App() {
 
   function loadCities() {
     API.getCities(cityOptions)
-    .then((res) => 
-      setCities(res.data)
+      .then((res) =>
+        setCities(res.data)
       )
       .catch(err => console.log(err));
   };
@@ -55,9 +55,10 @@ function App() {
 
   return (
     <>
-    <div className="container">
-      <Table trails={trails} cities={cities} handleChange={handleChange}/>
-    </div>
+      <div className="container">
+        {/* <CityList cities={cities} handleChange={handleChange} /> */}
+        <Table trails={trails} cities={cities} handleChange={handleChange} />
+      </div>
     </>
   );
 }
