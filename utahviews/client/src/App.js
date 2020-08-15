@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import { RecoilRoot } from 'recoil';
+import Favorites from "./pages/Favorites";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Nav />
           <Route exact path='/' component={Home} />
           <Route exact path="/search" component={Search}/>
+          <Route exact path="/favorites" component={Favorites}/>
           <Route exact path='/login' component={LogIn} />
           <Route exact path='/signup' component={SignUp} />
           <Search />

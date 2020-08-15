@@ -31,8 +31,13 @@ const userSchema = new Schema({
 		unique: false,
 		minlength: 8,
 		required: true 
-	}
-
+	},
+	favorites: [
+		{
+		  type: Schema.Types.ObjectId,
+		  ref: "Favorite"
+		}
+	]
 })
 
 // Define schema methods
