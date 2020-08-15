@@ -3,7 +3,7 @@ import '../App.css';
 import Table from '../components/Table';
 import API from '../utils/API';
 //import FavBtn from '../components/FavBtn';
-//import CityList from '../components/CityList';
+import CityList from '../components/CityList';
 
 function App() {
 
@@ -61,6 +61,7 @@ function App() {
   return (
     <>
       <div className="container">
+        <CityList cities={cities} handleChange={handleChange} />
         <Table trails={trails} cities={cities} handleChange={handleChange} />
       </div>
     </>
