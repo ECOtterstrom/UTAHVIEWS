@@ -36,7 +36,7 @@ class Signup extends React.Component {
       lastName: this.state.lastName,
       username: this.state.username,
       email: this.state.email,
-			password: this.state.password
+      password: this.state.password
 		}).then(response => {
 				console.log(response)
 				if (!response.data.errmsg) {
@@ -44,7 +44,7 @@ class Signup extends React.Component {
 					this.setState({ //redirect to login page
 						redirectTo: '/login'
 					})
-				} else {
+        } else {
 					console.log('username already taken')
 				}
 			}).catch(error => {
@@ -56,6 +56,13 @@ class Signup extends React.Component {
 
   render() {
     return(
+      <div className="container">
+        <div className="row">
+            <div className="col-md-4"></div>
+            <div className="col-md-3">
+              <h1 className="centerSignUp">Sign Up</h1>
+              </div>
+        </div>
           <div className="container signup">
         <form>
         <div className="form-group row">
@@ -106,6 +113,7 @@ class Signup extends React.Component {
           </div>
         </div>
       </form>
+      </div>
       </div>
       
     );

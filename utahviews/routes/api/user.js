@@ -1,17 +1,12 @@
 const router = require("express").Router();
 const authController = require("../../controllers/authController");
-const passport = require('passport');
+const passport = require('../../passport');
 const { default: Axios } = require("axios");
 
-// Matches with "/api/user/login"
+// Matches with "/api/auth/login"
 router.route("/login")
   // .get(citiesController.findAll)
-  .post(function (req, res, next) {
-    console.log('routes/user.js, login, req.body: ');
-    console.log(req.body)
-    next()
-},
-passport.authenticate('local'), authController.login);
+  .post(passport.authenticate('local'), (req, res) => res.json(req.user))
 
 router.route('/')
   .post(authController.createUser)
