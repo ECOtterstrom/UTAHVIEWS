@@ -6,6 +6,7 @@ import API from '../utils/API';
 //import CityList from '../components/CityList';
 
 function App() {
+
   const [trails, setTrails] = useState([]);
   const [cities, setCities] = useState([])
   const [cityOptions, setCityOptions] = useState({
@@ -64,6 +65,8 @@ function App() {
       </div>
     </>
   );
+
+  
 }
 
 export default App;
