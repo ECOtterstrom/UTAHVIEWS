@@ -1,8 +1,42 @@
 .navBar {
 
-    background-color: rgb(70, 65, 99);
+    background-color: #6f7e81;
  
-    border-color: #425766;
-   
+    border-color: #7b93a5;
+    padding:  10px 40px 0px 40px;
 
+}
+
+.title {
+
+    display: block;
+    padding: 0px 20px;
+    color: white;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.nav-item {
+    list-style-type: none;
+    /* margin: 20;
+    padding: 20; */
+    color: black;
+  }
+
+  a {
+color: #fff;
+  }
+  
+  a:hover {
+
+    color:black;
+  }
+
+.userlogin {
+
+    padding-left: auto;
+    padding-right: 20px;
 }

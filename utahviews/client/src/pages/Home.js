@@ -8,7 +8,7 @@ function Home() {
         {/* <!-- Header - set the background image for the header in the line below --> */}
             <header>
                 <div className = "box">
-                <img className="img-fluid d-block mx-auto" src="views.jpg" alt=""height="500" />
+                <img className="coverphoto" src="views.jpg" alt=""height="971" />
                 
                     <div className="banner__text">
                         <h1 className="heading-1">
@@ -37,9 +37,10 @@ function Home() {
         {/* <!-- Content section --> */}
             <section className="py-5">
                 <div className="container">
-                    <h1>Explore Utah with us! please</h1>
-                        <p className="lead">Using our app you can search for any trail in Utah right at your finger tips!</p>
-                        <p></p>
+                    <h1>Explore Utah with us! </h1>
+                        <p className="lead">
+                Using our app you can search for any trail in Utah right at your finger tips!</p>
+                        <p> "Look deep into nature and you will understand everything better." - Albert Einstein</p>
                 </div>
             </section>
 
@@ -48,17 +49,31 @@ function Home() {
         { <img className="img-fluid d-block mx-auto" src="mountains.jpg" alt="" class="img-thumbnail" height="480" width="650"/>}
         </div>
         <div class="column">
-    {<img ClassName="image" src="tibblefork.jpg" alt="tibblefork" class="img-thumbnail" height="815" width="650"/>}
+    {<img className="image" src="tibblefork.jpg" alt="tibblefork" class="img-thumbnail" height="845" width="650"/>}
   </div>
 </div>
 
-            <section className="py-5">
+
+<section className="py-5">
                 <div className="container">
-                    <h1>Hike with confidence using our app</h1>
-                        <p className="lead">We have all the trails you could want to explore in Utah</p>
-                        <p>This app is for those who love the outdoors! wether you are going on a quick hike or a long hike we got it!</p>
+                    <h1>Hike with confidence using our app!</h1>
+                        <p className="lead">
+                        This app is for those who love the outdoors! wether you are going on a quick hike or a long hike we got it!</p>
+                        <p> "Thousands of tired, nerve-shaken, over-civilized people are beginning to find out that going to the mountains is going home; that wildness is a necessity." - John Muir</p>
                 </div>
             </section>
+
+            <div className="row">
+  <div className="column">
+        { <img className="img-fluid d-block mx-auto" src="moabb.JPG" alt="" class="img-thumbnail" height="480" width="650"/>}
+        </div>
+        <div class="column">
+    {<img className="image" src="girlsss.jpeg" alt="tibblefork" class="img-thumbnail" height="845" width="650"/>}
+    <h5>"And to the forest i go, to lose my mind and find my soul"</h5>
+  </div>
+</div>
+
+            
 
         {/* <!-- Footer --> */}
             <footer className="py-5 bg-dark">

@@ -25,9 +25,14 @@ display: inline-block;
 .image {
     border:1px solid #021a40;
 }
-/* 
-.mainImage {
 
-  background-repeat: no-repeat;
-  background-size: 100px;
-} */
+.coverphoto {
+    background-size: 300px 100px; 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.h5 {
+
+    text-align: left;
+}
