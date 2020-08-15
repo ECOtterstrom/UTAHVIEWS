@@ -7,7 +7,7 @@ import CityList from './CityList';
 const Table = (props) => {
     return (
         <div className="container">
-        <CityList cities={props.cities} handleChange={props.handleChange} />
+        
             <div className="row">
                 <table className='table'>
                     <thead>
