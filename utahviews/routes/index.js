@@ -3,6 +3,7 @@ const router = require("express").Router();
 const apiRoutes = require("./api");
 const trailRoutes = require("./api");
 const cityRoutes = require("./api");
+const favoriteRoutes = require("./api");
 
 // API Routes
 router.use("/api", apiRoutes);
