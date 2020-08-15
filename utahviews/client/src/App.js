@@ -5,12 +5,13 @@ import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
+import { RecoilRoot } from 'recoil';
 
 
 function App() {
   return (
 
-    <>
+    <RecoilRoot>
       <Router >
         <div>
           <Nav />
@@ -22,7 +23,7 @@ function App() {
         </div>
       </Router>
       
-    </>
+    </RecoilRoot>
 
   );
 }

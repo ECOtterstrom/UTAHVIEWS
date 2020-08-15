@@ -18,4 +18,5 @@ export default {
 
 export const UserService = {
   createUser: (userData) => Axios.post('/api/auth/', userData),
+  loginUser: async (userData) => (await Axios.post('/api/auth/login', userData)).data
 }
