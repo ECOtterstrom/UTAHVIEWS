@@ -3,7 +3,6 @@ const path = require("path");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
-const MONGODB_URI = "mongodb://<Miro87>:<Password95!>@ds013901.mlab.com:13901/heroku_18c22tpk"
 
 const PORT = process.env.PORT || 3001;
 const app = express();
