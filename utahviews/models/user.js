@@ -9,7 +9,7 @@ const userSchema = new Schema({
 	username: { 
 		type: String, 
 		unique: true, 
-		required: true 
+		required: true
 	},
 	firstName: { 
 		type: String, 
@@ -31,8 +31,13 @@ const userSchema = new Schema({
 		unique: false,
 		minlength: 8,
 		required: true 
-	}
-
+	},
+	favorites: [
+		{
+		  type: Schema.Types.ObjectId,
+		  ref: "Favorite"
+		}
+	]
 })
 
 // Define schema methods

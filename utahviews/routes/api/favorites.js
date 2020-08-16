@@ -5,6 +5,10 @@ const favoritesController = require("../../controllers/favoritesController");
 router.route("/")
   .get(favoritesController.findAll)
   .post(favoritesController.create);
+  
+// Matches with "/api/favorites/trail/:id"
+router.route("/trail/:id")
+  .get(favoritesController.populateFavorites);
 
 // Matches with "/api/favorites/:id"
 router

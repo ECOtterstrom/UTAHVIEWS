@@ -7,7 +7,7 @@ import TableBody from './TableBody';
 const Table = (props) => {
     return (
         <div className="container">
-        {/* <CityList cities={props.cities} handleChange={props.handleChange} /> */}
+        <FavoritesList favorites={props.cities} handleChange={props.handleChange} />
             <div className="row">
                 <table className='table'>
                     <thead>
