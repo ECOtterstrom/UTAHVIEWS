@@ -18,8 +18,12 @@ export default {
 
 export const UserService = {
   createUser: (userData) => Axios.post('/api/auth/', userData),
+
+  loginUser: async (userData) => (await Axios.post('/api/auth/login', userData)).data
+
   populateFavorites: async (userId) => {
     const favoriteIds = (await Axios.get(`/api/favorites/trail/${userId}`)).data.favorites.map(x => x.id).join(',');
     return (await Axios.get(`https://www.hikingproject.com/data/get-trails-by-id?ids=${favoriteIds}&key=200863375-e5ef24a92a0f3dbef5becd31a47966d1`)).data;
   }
+
 }

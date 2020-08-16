@@ -13,7 +13,7 @@ code {
 }
 
 .signup {
-  margin-top: 200px;
+  margin-top: 50px;
   background-color: gray;
   height: 400px;
   width: 400px;
@@ -21,4 +21,20 @@ code {
 
 .logIn {
   margin-top: 90px;
+}
+
+.centerSignUp {
+  text-align: center;
+  margin-top: 100px;
+  color: black;
+}
+
+.centerLogIn {
+  text-align: center;
+  margin-top: 100px;
+  color: black;
+}
+
+.loginForms {
+margin-top: 45px;
 }
