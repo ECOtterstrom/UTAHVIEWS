@@ -1,13 +1,14 @@
 import React from 'react';
 import TableHead from './TableHead';
 import TableBody from './TableBody';
+import FavCard from './FavCard';
 // import CityList from './CityList';
 
 
 const Table = (props) => {
     return (
         <div className="container">
-        <FavoritesList favorites={props.cities} handleChange={props.handleChange} />
+        <FavCard favorites={props.cities} handleChange={props.handleChange} />
             <div className="row">
                 <table className='table'>
                     <thead>
