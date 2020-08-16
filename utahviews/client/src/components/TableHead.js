@@ -5,7 +5,7 @@ const TableHead = () => {
     return (
             <tr>
                 {/* <th>onClick={() =><Button>Last Name</Button>}</th> */}
-                <th scope="col">Name</th>
+                <th scope="col">Trail</th>
                 <th scope="col">Location</th>
                 <th scope="col">Summary</th>
                 <th scope="col">Difficulty</th>
