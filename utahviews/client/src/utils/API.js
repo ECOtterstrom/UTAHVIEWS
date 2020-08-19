@@ -28,7 +28,6 @@ export const UserService = {
   populateFavorites: async (userId) => {
     return (await Axios.get(`/api/auth/${userId}`)).data
   }
-
 }
 
 export const trailService = {
