@@ -29,7 +29,6 @@ export const UserService = {
     const favoriteIds = (await Axios.get(`/api/auth/${userId}`)).data.favorites.map(x => x.id).join(',');
     return (await Axios.get(`https://www.hikingproject.com/data/get-trails-by-id?ids=${favoriteIds}&key=200863375-e5ef24a92a0f3dbef5becd31a47966d1`)).data;
   }
-
 }
 
 export const trailService = {
