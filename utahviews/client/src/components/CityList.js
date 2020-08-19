@@ -4,6 +4,7 @@ import React from 'react';
 const CityList = (props) => {
     return (
         <div className="card-body">
+            <b>Utah Cities</b>
             <select onChange={props.handleChange}>
                 {props.cities.map(x => <option value={x.city} key={x._id}>{x.city}</option>)}
             </select>
