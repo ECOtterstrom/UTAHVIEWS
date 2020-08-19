@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import FavBtn from '../components/FavBtn'
+import FavBtn2 from '../components/FavBtn2'
+import '../styles/FavBtn.css'
+import { trailService, UserService } from '../utils/API';
+import { userState } from '../utils/UserAtom';
+import { useRecoilState } from 'recoil';
 
 const TableBody = (props) => {
-    
+    const [isFavorite, setIsFavorite] = useState(false);
+    const [user, setUser] = useRecoilState(userState);
+
+    const handleClick = (event) => {
+       isFavorite ? setIsFavorite(false):setIsFavorite(true);
+       trailService.create(props).then(data => UserService.saveFavorite(user._id, data._id))
+    }
+
     return (
     
         <tr>
@@ -15,7 +27,7 @@ const TableBody = (props) => {
             <td>{props.stars}</td>
             <td>{props.starVotes}</td>
             <td><img src={props.imgSqSmall} alt={'profile pic'} /></td>
-            <td className="fav-icon"><FavBtn /></td>
+            {user && <td onClick={handleClick}>{isFavorite ? <FavBtn2 />:<FavBtn/>}</td>}
         </tr>
 
     )

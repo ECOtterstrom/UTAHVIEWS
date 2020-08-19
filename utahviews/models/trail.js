@@ -5,19 +5,24 @@ const trailSchema = new Schema({
   id: {
     type: Number,
     required: true
-  }, name: {
+  }, 
+  name: {
     type: String,
     required: true
-  }, type: {
+  }, 
+  type: {
     type: String,
     required: false
-  }, summary: {
+  }, 
+  summary: {
     type: String,
     required: false
-  }, difficulty: {
+  }, 
+  difficulty: {
     type: String,
     required: false
-  }, stars: {
+  }, 
+  stars: {
     type: Number,
     required: false
   }, starVotes: {

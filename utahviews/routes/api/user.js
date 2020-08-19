@@ -9,13 +9,14 @@ router.route("/login")
   .post(passport.authenticate('local'), (req, res) => res.json(req.user))
 
 router.route('/')
+  .get(authController.fetchUser)
   .post(authController.createUser)
 
 // Matches with "/api/user/:id"
-// router
-//   .route("/:id")
-//   .get(citiesController.findById)
-//   .put(citiesController.update)
-//   .delete(citiesController.remove);
+router
+  .route("/:id")
+  .get(authController.populateFavorites)
+  .put(authController.update)
+  .delete(authController.remove);
 
 module.exports = router;
