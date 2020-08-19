@@ -20,11 +20,13 @@ function Favorites() {
   useEffect(() => console.log(favorites), [favorites])
 
 
-  return !user ?  <Redirect to={"/login"} /> :(
+  return !user ? <Redirect to={"/login"} /> : (
     <>
       <div className="container">
         <h1>{user.name}</h1>
-        {favorites && favorites ? favorites.map(x => <FavCard {...x} />):<h1>No current favorites have been selected.</h1>}
+        <div class="card-deck col-12">
+          {favorites && favorites ? favorites.map(x => <FavCard {...x} />) : <h1>No current favorites have been selected.</h1>}
+        </div>
       </div>
     </>
   );
