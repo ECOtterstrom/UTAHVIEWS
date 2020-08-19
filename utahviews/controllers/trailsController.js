@@ -1,15 +1,16 @@
 const db = require("../models");
 const Axios = require('axios');
+const { Mongoose, Types } = require("mongoose");
 
 // Defining methods for the trailsController
 module.exports = {
   get: async function(req, res) {
     let { latitude, longitude } = req.query;
     if(!latitude) {
-      latitude = "40.027"
+      latitude = "40.46"
     }
     if(!longitude) {
-      longitude = "-105.251"
+      longitude = "-111.77"
     }
 
     try {
@@ -19,13 +20,9 @@ module.exports = {
       console.log(err);
     }
   },
-  // get: function(req, res) {
-  //   db.Trail
-  //     .find(req.query)
-  //     // .sort({ date: -1 })
-  //     .then(dbModel => res.json(dbModel))
-  //     .catch(err => res.status(422).json(err));
-  // },
+  populateTrails: async (req, res) => {
+    res.json((await Axios.get(`https://www.hikingproject.com/data/get-trails-by-id?ids=${req.query.favoriteIds}&key=200863375-e5ef24a92a0f3dbef5becd31a47966d1`)).data);
+  },
   findAll: function(req, res) {
     db.Trail
       .find(req.query)
@@ -42,7 +39,11 @@ module.exports = {
   create: function(req, res) {
     db.Trail
       .create(req.body)
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => {
+        console.log(dbModel)
+        db.User.findOneAndUpdate({_id: Types.ObjectId(req.body.userId)}, { $push: { 'favorites': [dbModel._id] } }, { "new": true, "upsert": true } )
+        .then(data => res.json(data));
+        })
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {

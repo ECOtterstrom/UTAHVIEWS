@@ -39,12 +39,14 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  update: function (req, res) {
-    db.User
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
+  // update: async function (req, res) {
+  //   const user = await db.User.findById(req.params.id)
+  //   user.favorites.push(req.body._id)
+  //   console.log(user)
+  //   user.save()
+  //     .then(data => res.json(data))
+  //     .catch(err => console.log(err))
+  // },
   remove: function (req, res) {
     db.User
       .findById({ _id: req.params.id })

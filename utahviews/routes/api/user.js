@@ -16,7 +16,7 @@ router.route('/')
 router
   .route("/:id")
   .get(authController.populateFavorites)
-  .put(authController.update)
+  // .put(authController.update)
   .delete(authController.remove);
 
 module.exports = router;

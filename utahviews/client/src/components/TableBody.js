@@ -12,7 +12,7 @@ const TableBody = (props) => {
 
     const handleClick = (event) => {
        isFavorite ? setIsFavorite(false):setIsFavorite(true);
-       trailService.create(props).then(data => UserService.saveFavorite(user._id, data._id))
+       trailService.create({...props, userId: user._id }).then(data => console.log(data));
     }
 
     return (

@@ -12,21 +12,19 @@ function Favorites() {
   const [favorites, setFavorites] = useState([])
   const [user, setUser] = useRecoilState(userState);
 
-  useEffect(() => populateTrails(), [])
+  useEffect(() => {
+    UserService.populateFavorites(user._id).then(data => setFavorites(data.favorites));
+  }, [])
 
-  async function populateTrails() {
-    const { data} = await UserService.populateFavorites();
-    setFavorites(data)
-  }
   useEffect(() => console.log(trails), [trails])
   useEffect(() => console.log(favorites), [favorites])
 
 
-  return (
+  return !user ?  <Redirect to={"/login"} /> :(
     <>
       <div className="container">
         <h1>{user.name}</h1>
-        {favorites.map(x => <FavCard {...x} />)}
+        {favorites && favorites ? favorites.map(x => <FavCard {...x} />):<h1>No current favorites have been selected.</h1>}
       </div>
     </>
   );
