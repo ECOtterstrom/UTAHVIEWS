@@ -8,6 +8,7 @@ const FavCard = (props) => {
 
 
     return (
+
                 <div class="card" style={{ width: '18rem' }}>
                     <img class="card-img-top" src={props.imgMedium} alt="Card image cap" />
                     <div class="card-body">
@@ -28,5 +29,16 @@ const FavCard = (props) => {
                 </div>
     );
 }
+
+{/* <td>{props.name}</td>
+<td>{props.location}</td>
+<td>{props.summary}</td>
+<td>{props.difficulty}</td>
+<td>{props.length}</td>
+<td>{props.ascent}</td>
+<td>{props.stars}</td>
+<td>{props.starVotes}</td>
+<td><img src={props.imgSqSmall} alt={'profile pic'} /></td>
+<td className="fav-icon"><FavBtn /></td> */}
 
 export default FavCard;   
