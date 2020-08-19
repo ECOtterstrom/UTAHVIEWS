@@ -4,19 +4,14 @@ import Table from '../components/Table';
 import API from '../utils/API';
 //import FavBtn from '../components/FavBtn';
 import CityList from '../components/CityList';
+import { CityState } from '../utils/CityAtom';
+import { useRecoilState } from 'recoil';
 
 function App() {
 
   const [trails, setTrails] = useState([]);
   const [cities, setCities] = useState([])
-  const [cityOptions, setCityOptions] = useState({
-    city: "",
-    latitude: "",
-    longitude: ""
-    // city: "Alton",
-    // latitude: 37.43,
-    // longitude: -112.51
-  });
+  const [cityOptions, setCityOptions] = useRecoilState(CityState);
   // const [favorite, setFavorite] = useState({
   //   username: "",
   //   id: "",

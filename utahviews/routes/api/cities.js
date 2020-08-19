@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const citiesController = require("../../controllers/citiesController");
 
-// Matches with "/api/trails"
+// Matches with "/api/cities"
 router.route("/")
   .get(citiesController.findAll)
   .post(citiesController.create);
 
-// Matches with "/api/trails/:id"
+// Matches with "/api/cities/:id"
 router
   .route("/:id")
   .get(citiesController.findById)

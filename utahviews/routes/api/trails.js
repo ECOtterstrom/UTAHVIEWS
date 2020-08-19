@@ -13,4 +13,7 @@ router
   .put(trailsController.update)
   .delete(trailsController.remove);
 
+router.route('/favorite')
+  .get(trailsController.populateTrails)
+
 module.exports = router;
