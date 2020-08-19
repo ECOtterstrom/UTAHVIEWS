@@ -15,7 +15,7 @@ function Home() {
                             Find your next favorite trail
                         </h1>
                         <form className="algolia-search styles-module__form___3hC1t undefined" data-reactroot="">
-                            <input type="text" autocomplete="off" autocorrect="off" className="styles-module__input___28bDf" placeholder="Enter a city" spellcheck="false" />
+                            <input type="text" autoComplete="off" autoCorrect="off" className="styles-module__input___28bDf" placeholder="Enter a city" spellCheck="false" />
                             <input type="submit" className="styles-module__btn___I-OkD  " title="Search" value="Search" />
                         </form>
                     </div>

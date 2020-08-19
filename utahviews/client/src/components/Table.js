@@ -1,7 +1,7 @@
 import React from 'react';
 import TableHead from './TableHead';
 import TableBody from './TableBody';
-import CityList from './CityList';
+//import CityList from './CityList';
 
 
 const Table = (props) => {

@@ -17,7 +17,10 @@ function App() {
     // latitude: 37.43,
     // longitude: -112.51
   });
-
+  // const [favorite, setFavorite] = useState({
+  //   username: "",
+  //   id: "",
+  // });
 
   useEffect(() => {
     loadTrails()
@@ -62,7 +65,7 @@ function App() {
     <>
       <div className="container">
         <CityList cities={cities} handleChange={handleChange} />
-        <Table trails={trails} cities={cities} handleChange={handleChange} />
+        <Table trails={trails} cities={cities} handleChange={handleChange}/>
       </div>
     </>
   );
