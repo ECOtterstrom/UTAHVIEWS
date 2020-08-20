@@ -40,7 +40,7 @@ function Home() {
             {/* <!-- Header - set the background image for the header in the line below --> */}
             <header>
                 <div className="box">
-                    <img className="coverphoto" src="views.jpg" alt="" height="971" />
+                    <img className="coverphoto onehundred-percent" src="views.jpg" alt="" height="971" />
 
                     <div className="banner__text">
                         <h1 className="heading-1">
@@ -79,10 +79,10 @@ function Home() {
             </section>
 
             <div className="row">
-                <div className="column">
+                <div className="col-md-6 pad">
                     {<img className="img-fluid d-block mx-auto" src="little.jpg" alt="" class="img-thumbnail" height="480" width="650" />}
                 </div>
-                <div class="column">
+                <div class="col-md-6">
                     {<img className="image" src="rocks.jpg" alt="tibblefork" class="img-thumbnail" height="845" width="650" />}
                 </div>
             </div>
@@ -98,11 +98,11 @@ function Home() {
             </section>
 
             <div className="row">
-                <div className="column">
+                <div className="col-md-6 pad">
                     {<img className="img-fluid d-block mx-auto" src="moabb.JPG" alt="" class="img-thumbnail" height="480" width="650" />}
                     <h5>"And to the forest i go, to lose my mind and find my soul"</h5>
                 </div>
-                <div class="column">
+                <div class="col-md-6">
                     {<img className="image" src="girlsss.jpg" alt="tibblefork" class="img-thumbnail" height="845" width="650" />}
 
                 </div>

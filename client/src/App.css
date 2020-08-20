@@ -1,3 +1,6 @@
+body {
+  width: 100%;
+}
 
 
 .App {
@@ -51,4 +54,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.onehundred-percent {
+  width: 100%;
+}
+
+.pad {
+  padding-left: 75px;
 }
