@@ -12,7 +12,7 @@ class Signup extends React.Component {
       lastName: '',
       username: '',
       email: '',
-			password: ''
+      password: ''
 
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
@@ -40,14 +40,14 @@ class Signup extends React.Component {
 		}).then(response => {
 				console.log(response)
 				if (!response.data.errmsg) {
-					console.log('successful signup')
-					this.setState({ //redirect to login page
-						redirectTo: '/login'
-					})
+          alert("Signup Successful! Please log in.");
+          console.log('successful signup')
+          window.location.href = "/login";
         } else {
 					console.log('username already taken')
 				}
 			}).catch(error => {
+        alert("Signup error, please try again.");
 				console.log('signup error: ')
 				console.log(error)
 
