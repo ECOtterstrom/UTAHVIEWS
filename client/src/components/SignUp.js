@@ -24,7 +24,7 @@ class Signup extends React.Component {
 		})
 	}
 	handleSubmit(event) {
-		console.log('sign-up handleSubmit, username: ')
+    console.log('sign-up handleSubmit, username: ')
     console.log(this.state.firstName)
     console.log(this.state.lastName)
     console.log(this.state.username)
@@ -60,7 +60,7 @@ class Signup extends React.Component {
         <div className="row">
             <div className="col-md-4"></div>
             <div className="col-md-3">
-              <h1 className="centerSignUp">Sign Up</h1>
+              <h1 className="centerSignUp white-text">Sign Up</h1>
               </div>
         </div>
           <div className="container signup">

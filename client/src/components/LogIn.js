@@ -40,7 +40,7 @@ const GetInfo = () => {
       <div className="row">
         <div className="col-md-4"></div>
         <div className="col-md-3">
-          <h1 className="centerSignUp">Log In</h1>
+          <h1 className="centerSignUp white-text">Log In</h1>
         </div>
       </div>
       <div className="container signup">

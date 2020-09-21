@@ -1,4 +1,9 @@
 body {
+  background-image: url("./rocks.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   width: 100%;
 }
 
@@ -63,4 +68,12 @@ body {
 
 .pad {
   padding-left: 75px;
+}
+
+.white {
+  background-color: white;
+}
+
+.white-text {
+  color: white;
 }

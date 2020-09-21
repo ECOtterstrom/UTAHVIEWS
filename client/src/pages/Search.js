@@ -58,7 +58,7 @@ function App() {
 
   return (
     <>
-      <div className="container">
+      <div className="container white">
         <CityList cities={cities} handleChange={handleChange} />
         <Table trails={trails} cities={cities} handleChange={handleChange}/>
       </div>
